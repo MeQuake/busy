@@ -2,7 +2,6 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import Logger from 'js-logger';
 import { AppContainer } from 'react-hot-loader';
 import { message } from 'antd';
 import Cookie from 'js-cookie';
@@ -11,8 +10,6 @@ import { history } from './routes';
 import getStore from './store';
 import { loadTranslations } from './translations';
 import AppHost from './AppHost';
-
-Logger.useDefaults();
 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   navigator.serviceWorker.register('/service-worker.js');
